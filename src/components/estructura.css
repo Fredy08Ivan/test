@@ -1,0 +1,770 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+.container-fluid{
+	font-family: 'Raleway';
+}
+
+
+.form-floating {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 358px;
+  height: 50px;
+}
+
+
+
+
+ .svg {
+	width:50%;
+	height:50%;
+  
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+ 
+  
+} 
+
+
+/* Responsive de los svg */
+  @media only screen and (max-width: 450px){
+	.svg{
+		
+		width: 45px;
+		display: flex;
+
+		
+	}
+	.card{
+		width: 100%;
+		padding-bottom: 20px;
+		justify-content: center;
+		align-items: center;
+	}
+	.card-body{
+		width: 100%;
+		padding-bottom: 50px;
+		
+	}
+	.card-texto{
+		transform: translateY(30px);
+	}
+
+	.card-tittle{
+		transform: translateY(30px);
+	}
+	#botonFix{
+		transform: translateY(20px);
+	}
+}  
+
+/* termina el responsive de las imagenes */ 
+/* ¿que imagenes? */
+
+.boton {
+	background: none;
+	color: #000;
+}
+
+.boton {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.boton .rect {
+	width: 100%;
+	height: 100%;
+	stroke: #000;
+	stroke-width: 10px;
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	transition: .9s ease all;
+}
+
+.boton:hover .rect {
+	stroke-dashoffset: 0;
+}
+
+#colorBack{
+	background: #F2F3EB;
+}
+
+#colorIcon{
+background-color: aliceblue;
+}
+
+#contenedor{
+	margin: auto;
+}
+
+#letras{
+	float: left;
+	position: relative;
+}
+
+#letras .spaN{
+	position: absolute;
+	right: 0;
+	width: 0;
+	background: #F2F3EB;
+	border-left: 1px solid #000;
+
+	animation: maquina 1s infinite alternate steps(8);
+}
+
+@keyframes maquina {
+	from{
+		width: 100%;
+	}
+	to{
+		width: 0;
+	}
+}
+
+
+/* Boton de arreglo de efecto */
+#botonFix{
+	position: relative;
+	border-radius: 30px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	transition: 0.8ms;
+}
+
+#botonFix:hover{
+	width: 150px;
+}
+
+/* *codigo para eliminar el subrayado del Link */
+
+.txtref{
+	color: white;
+	text-decoration:none
+}
+
+
+.box{
+	width: 200px;
+	height:200px;
+	background-size: cover;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+
+/*Para el apartado de las listas en el generador de reportes*/
+.lateral{
+	box-sizing: border-box;
+	width: max(8%, 200px);
+	display: inline-block;
+	position: fixed;
+	padding-top: 30px
+	}
+	.principal{
+	margin-left: max(10%, 200px);
+	padding: 0 10px;
+	height: 100%;
+	text-align: justify;
+	background:white;
+	}
+.lateral header{
+	font-weight: bold;
+	font-size: 1.5rem;
+	text-align: center;
+	border-bottom: 1px solid rgb(255, 3, 3);
+
+	}
+	.lateral ul{
+	list-style:none;
+	padding-left:0;
+	margin-top:0;
+	}
+	.lateral ul li{
+	display:block;
+	position: relative;
+	padding: 8px 10px;
+	margin-left:0;
+
+	}
+	.lateral ul li a{
+	color: black;
+	text-decoration:none; 
+	}
+	.lateral ul li a:after{
+	content: ' ';
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	}
+	.lateral ul li:hover, .lateral ul li:hover a{
+	background: rgb(0, 238, 255);
+	color: white;
+	}
+
+
+	/* Codigo para Agregar periodo*/
+	#margenBtn{
+		margin: auto;
+	}
+
+	@media screen and (max-width: 400px) {
+		table{
+			width: 100%;
+		}
+		thead{
+			display: none;
+		}
+		tr:nth-of-type(2n){
+			background-color: inherit;
+		}
+		tr td:first-child{
+			background:#f0f0f0;
+			font-weight: bold;
+			font-size: 1.3em;
+		}
+		tbody td{
+			display: block;
+			text-align: center;
+		}
+		tbody td:before{
+			content: attr(data-th);
+			display: block;
+			text-align: center;
+		}
+	}
+
+	.logoT{
+		width: 50px;
+		height: 50px;
+
+	}
+
+
+	/* Animacion de cartas */
+.wrapper{
+		display: inline-block;
+		background: #01579b;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px rgba(0, 0, 0, 0.23);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -120px;
+		margin-left: -180px;
+	}
+
+
+	.flip-container{
+		display: inline-block;
+		perspective: 1000px;
+		vertical-align: top;
+	}
+
+
+
+	.wrapper:hover .flip-left{
+		transform: rotateY(-180deg);
+	}
+
+
+	.wrapper:hover .flip-right{
+		transform: rotateY(180deg);
+	}
+
+	.flip-container,
+	.front, 
+	.back{
+		width: 180px;
+		height: 240px;
+	}
+
+	.flip {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+	.font, 
+	.back{
+		backface-visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+
+	.front {
+    z-index: 2;
+    background: #2196F3;
+    transform: rotateY(0deg);
+    overflow: hidden;
+	}
+
+	.front-left .circle{
+		position: absolute;
+		right: -50px;
+		top: 50%;
+		margin-top: -50px;
+	}
+
+	.front-right .circle {
+		position: absolute;
+		left: -50px;
+		top: 50%;
+		margin-top: -50px;
+	}
+
+
+	.circle {
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		border-radius: 100%;
+		background: #ffffff;  box-shadow: 0 19px 38px rgba(0,0,0,0.20), 0 15px 12px rgba(0,0,0,0.12);
+	  
+	  }
+
+
+	.back{
+		background: rgb(220, 220, 220);
+		transform: rotateY(180deg);
+		overflow: hidden;
+	}
+
+	img{
+		width: 360px;
+		height: 240px;
+	}
+
+	.back-left img{
+		position: absolute;
+		left: 0;
+	}
+
+	.back-right img{
+		position: absolute;
+		right: 0;
+	}
+	/* Finaliza código de cartas */
+
+
+
+	/* codigo de inicio de session para los estilos y el responsive */
+	/* efectos para el contenedor de pantalla completa */
+#contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0;
+    padding: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+	
+	
+}
+
+/* contenedor del login a la izquierda */
+#contenedorcentrado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row;
+    
+    min-width: 380px;
+    max-width: 900px;
+    width: 90%;
+    
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    
+    /*opacity: 0.50;
+    filter: alpha(opacity=50);*/
+    
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* formulario de login */
+/* formulario de login */
+#login {
+    width: 100%;
+    max-width: 320px;
+    min-width: 320px;
+    padding: 30px 30px 50px 30px;
+   background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+    
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    
+    box-sizing: border-box;
+    
+    opacity: 1;
+    filter: alpha(opacity=1);
+}
+
+#login label {
+    display: block;
+    font-family: 'Overpass', sans-serif;
+    font-size: 120%;
+    color:#3c4245;
+    
+    margin-top: 15px;
+}
+
+#login input {
+    font-family: 'Overpass', sans-serif;
+    font-size: 110%;
+    color: #1b262c;
+    
+    display: block;
+    width: 100%;
+    height: 40px;
+    
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 10px;
+    
+    box-sizing: border-box;
+    
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+#login input::placeholder {
+    font-family: 'Overpass', sans-serif;
+    color: #E4E4E4;
+}
+
+#login button {
+    font-family: 'Overpass', sans-serif;
+    font-size: 110%;
+    color:#1b262c;
+    width: 100%;
+    height: 40px;
+    border: none;
+    
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    
+    background-color: #dfcdc3;
+    
+    margin-top: 10px;
+}
+
+#login button:hover {
+    background-color: #3c4245;
+    color:#dfcdc3;
+}
+/* formulario de login */
+/* formulario de login */
+
+/* seccion de la derecha */
+/* seccion de la derecha */
+/* por defecto */
+#derecho {
+    /*display: flex;
+    align-items:center;
+    justify-content:center;*/
+    
+    text-align: center;
+    width: 100%;
+    
+    opacity: 0.70;
+    filter: alpha(opacity=70);
+    
+    padding:20px 20px 20px 50px;
+    box-sizing: border-box;
+}
+
+.titulo {
+    font-size: 300%;
+    color:#000000;
+}
+
+.logo-empresa img {
+    width: 60%;
+}
+
+hr {
+    border-top: 1px solid #000000;
+	border-bottom: 1px solid #dfcdc3;
+    
+}
+.pie-form {
+    font-size: 90%;
+    text-align: center;    
+    margin-top: 15px;
+}
+
+.pie-form a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    margin-bottom: 3px;
+}
+
+.pie-form a:hover {
+    color: #719192;
+}
+/* seccion de la derecha */
+/* seccion de la derecha */
+
+/* ajustar a pantallas con ancho menor o igual a 775px; */
+/* ajustar a pantallas con ancho menor o igual a 775px; */
+@media all and (max-width: 775px) 
+{
+    #contenedorcentrado {
+        flex-direction:column-reverse;
+
+        min-width: 380px;
+        max-width: 900px;
+        width: 90%;
+
+        background-color: #5f6769;
+
+        /*opacity: 0.50;
+        filter: alpha(opacity=50);*/
+
+        border-radius: 10px 10px 10px 10px;
+        -moz-border-radius: 10px 10px 10px 10px;
+        -webkit-border-radius: 10px 10px 10px 10px;
+
+        -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+        -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+        box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+
+        padding: 30px;
+        box-sizing: border-box;
+    }
+    
+    #login {
+        margin: 0 auto;
+    }
+    
+    #derecho {
+        padding:20px 20px 20px 20px;
+    }
+    
+    #login label {
+        text-align: left;
+    }
+}
+/* ajustar a pantallas con ancho menor o igual a 775px; */
+/* ajustar a pantallas con ancho menor o igual a 775px; */
+
+/* Codigo de estilo de formulario para registrar usuario  */
+#formulario{
+    width: 450px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    background:linear-gradient(#e66465, #9198e5);
+    border-radius: 5px;
+	box-shadow: 3px 2px 15px black;
+	border-radius: 25px;
+}
+
+
+/*--TITULO-----------------------*/
+.titulo{
+    color: #1d4169;
+    margin-bottom: 20px;
+}
+
+/*--CAJAS-DE-DATOS---------------*/
+.cajas{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    border: none;
+    border-left: 10px solid #d9e4ea;
+    transition: all .5s ease;
+}
+
+.cajas:hover, .cajas:focus{
+    border-left: 10px solid #1a4c7e;
+}
+
+/*--TERMINOS-Y-CONDICIONES-------*/
+.termino1{
+    text-align: center;
+    color: #3b3b3b;
+}
+
+.termino2{
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.termino2:hover{
+    color: #dbdbdb;
+}
+
+/*--BOTON-DE-REGISTRARSE---------*/
+#botn{
+    width: 100%;
+    padding: 15px;
+    border-radius: 2px;
+    border: none;
+    margin: 20px 0;
+    font-size: 15px;
+    background: #225677;
+    color: white;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+#botn:hover{
+    background: #133043;
+}
+
+/*--YA-TENGO-CUENTA--------------*/
+.tengo-cuenta{
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tengo-cuenta:hover{
+    color: #0f04a7;
+}
+
+
+
+/* Efectos de tarjeta */
+
+
+.prin{
+	margin-top: 100px;
+	font-family: 'Raleway';
+}
+
+
+/*tarjeta 1*/
+.card-header-first{
+	margin-top:-40px;
+    height: 120px;
+	background: linear-gradient(-90deg, #BF019F, #F28A57); 
+	box-shadow:1px 5px 15px #a2a2a2;
+}
+
+/*tarjeta 2*/
+.card-header-second{
+	box-shadow:1px 7px 15px #a2a2a2;
+    margin:-25px -25px 0px -25px;
+    height: 120px;
+	background: linear-gradient(-90deg, #8E2DE2, #4A00E0); 
+}
+
+/*tarjeta 3*/
+.card-header-third{
+    margin-top:-25px;
+    height: 120px;
+	box-shadow:1px 5px 15px #a2a2a2;
+    background: linear-gradient(-90deg, #11998e, #38ef7d); 
+}
+
+
+/*tarjeta 4*/
+.card-header-four{
+	margin-top:-40px;
+    height: 120px;
+	background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+	box-shadow:1px 5px 15px #a2a2a2;
+}
+
+/*tarjeta 5*/
+.card-header-five{
+	box-shadow:1px 7px 15px #a2a2a2;
+    margin:-25px -25px 0px -25px;
+    height: 120px;
+	background: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+}
+
+/*tarjeta 6*/
+.card-header-six{
+    margin-top:-25px;
+    height: 120px;
+	box-shadow:1px 5px 15px #a2a2a2;
+    background: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+
+.card-section-third span i{
+	padding:17px;
+	margin:0px 10px;
+	color:#fff;
+	height:50px;
+	width:50px;
+	box-shadow:1px 6px 24px #d2d2d2;
+	background: linear-gradient(-90deg, #11998e, #38ef7d); 
+}
+
+.card-header-third span i:hover,.card-section-third span i:hover{
+	box-shadow:1px 1px 15px #000;
+}
+
+/*efecto shadows para todas las tarjetas*/
+.card-section{
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+/*Para el efecto sombra al pasar por encima el mouse*/
+.card-section:hover{
+	box-shadow:1px 1px 20px #d2d2d2;
+}
+
+#prin2{
+	margin-top: 40px;
+}
+
+
+
+/* ESTILOS DE ASIGNAR DOCENTES SOLAMENTE PARA PONER BACKGROUND A LAS CARDS */
+
+#backCard{
+background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+
+.tituloprin{
+	font-family: monospace;
+	font-size: 65px;
+	color:white;
+	text-shadow: 1.5px 1.5px 2.5px blue;
+}
+
+
+
+
+
+
+
+
+
